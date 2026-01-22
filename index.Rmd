@@ -13,7 +13,7 @@ rm(list = ls())
 
 # Install and load packages
 
-```{r packages}
+```{r packages, message=FALSE}
 # install the rio package if necessary
 # install.packages('rio')
 
@@ -127,6 +127,12 @@ cleanedData_CSV = read.csv("cleanedData.csv")
 
 # explore the contents of cleaned_CSV
 str(cleanedData_CSV)
+
+# check the beginning of the data
+head(cleanedData_CSV)
+
+# check the end of the data
+tail(cleanedData_CSV)
 ```
 
 

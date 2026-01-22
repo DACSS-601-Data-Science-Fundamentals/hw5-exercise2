@@ -382,14 +382,6 @@ library(ggplot2)
 
 # load the dplyr package into session
 library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
 </div>
 <div id="read-in-data" class="section level1">
 <h1>Read in data</h1>
@@ -677,6 +669,52 @@ str(cleanedData_CSV)</code></pre>
 ##  $ GNI_per_capita                    : num  69117 112710 81949 76008 64053 ...
 ##  $ GNI_per_capita_rank_minus_HDI_rank: int  12 0 5 4 13 10 14 4 6 9 ...
 ##  $ HDI_Rank2022                      : int  3 1 2 4 6 4 8 9 7 13 ...</code></pre>
+<pre class="r"><code># check the beginning of the data
+head(cleanedData_CSV)</code></pre>
+<pre><code>##   HDI_Rank2023     Country   HDI Life_expectancy_at_birth
+## 1            1     Iceland 0.972                   82.691
+## 2            2      Norway 0.970                   83.308
+## 3            2 Switzerland 0.970                   83.954
+## 4            4     Denmark 0.962                   81.933
+## 5            5     Germany 0.959                   81.378
+## 6            5      Sweden 0.959                   83.262
+##   Expected_years_of_schooling Mean_years_of_schooling GNI_per_capita
+## 1                    18.85059                13.90893       69116.94
+## 2                    18.79285                13.11796      112710.02
+## 3                    16.66753                13.94912       81948.90
+## 4                    18.70401                13.02732       76007.86
+## 5                    17.30922                14.29637       64053.22
+## 6                    18.99147                12.74033       66102.09
+##   GNI_per_capita_rank_minus_HDI_rank HDI_Rank2022
+## 1                                 12            3
+## 2                                  0            1
+## 3                                  5            2
+## 4                                  4            4
+## 5                                 13            6
+## 6                                 10            4</code></pre>
+<pre class="r"><code># check the end of the data
+tail(cleanedData_CSV)</code></pre>
+<pre><code>##     HDI_Rank2023                  Country   HDI Life_expectancy_at_birth
+## 188          188                     Mali 0.419                   60.439
+## 189          188                    Niger 0.419                   61.183
+## 190          190                     Chad 0.416                   55.069
+## 191          191 Central African Republic 0.414                   57.408
+## 192          192                  Somalia 0.404                   58.816
+## 193          193              South Sudan 0.388                   57.617
+##     Expected_years_of_schooling Mean_years_of_schooling GNI_per_capita
+## 188                    7.011332                1.630000      2341.5881
+## 189                    8.308920                1.412289      1590.1880
+## 190                    8.347590                2.334985      1748.0010
+## 191                    7.435768                3.989431      1099.8607
+## 192                    7.486165                1.900000      1474.7385
+## 193                    5.634770                5.730000       688.3473
+##     GNI_per_capita_rank_minus_HDI_rank HDI_Rank2022
+## 188                                -10          188
+## 189                                 -3          189
+## 190                                 -9          189
+## 191                                 -1           NA
+## 192                                 -5          192
+## 193                                  0          191</code></pre>
 </div>
 
 
